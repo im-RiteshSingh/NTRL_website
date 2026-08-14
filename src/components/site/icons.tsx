@@ -1,0 +1,58 @@
+import {
+  Award,
+  Beaker,
+  Boxes,
+  Building2,
+  CheckCircle2,
+  Compass,
+  Cog,
+  Drill,
+  Droplets,
+  FlaskConical,
+  Gauge,
+  HardHat,
+  Landmark,
+  Layers,
+  Leaf,
+  Map,
+  Mountain,
+  Route,
+  Ruler,
+  ScanLine,
+  ShieldCheck,
+  TrainFront,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
+
+export const iconMap: Record<string, LucideIcon> = {
+  flask: FlaskConical,
+  layers: Layers,
+  route: Route,
+  mountain: Mountain,
+  boxes: Boxes,
+  droplets: Droplets,
+  drill: Drill,
+  scan: ScanLine,
+  leaf: Leaf,
+  map: Map,
+  beaker: Beaker,
+  ruler: Ruler,
+  shield: ShieldCheck,
+  badge: Award,
+  cog: Cog,
+  gauge: Gauge,
+  users: Users,
+  check: CheckCircle2,
+  building: Building2,
+  train: TrainFront,
+  landmark: Landmark,
+  cityscape: Building2,
+  compass: Compass,
+  hardhat: HardHat,
+};
+
+export function DataIcon({ name, className }: { name: string; className?: string }) {
+  const Icon = iconMap[name] ?? FlaskConical;
+  return <Icon className={className} aria-hidden="true" />;
+}

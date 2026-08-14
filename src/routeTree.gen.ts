@@ -13,9 +13,12 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CertificationsRouteImport } from './routes/certifications'
 import { Route as ClientsRouteImport } from './routes/clients'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
@@ -39,6 +42,11 @@ const ClientsRoute = ClientsRouteImport.update({
   path: '/clients',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
@@ -49,9 +57,19 @@ const IndustriesRoute = IndustriesRouteImport.update({
   path: '/industries',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
@@ -70,9 +88,12 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/certifications': typeof CertificationsRoute
   '/clients': typeof ClientsRoute
+  '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/industries': typeof IndustriesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/projects': typeof ProjectsRoute
+  '/terms': typeof TermsRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/services/': typeof ServicesIndexRoute
 }
@@ -81,9 +102,12 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/certifications': typeof CertificationsRoute
   '/clients': typeof ClientsRoute
+  '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/industries': typeof IndustriesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/projects': typeof ProjectsRoute
+  '/terms': typeof TermsRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/services': typeof ServicesIndexRoute
 }
@@ -93,9 +117,12 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/certifications': typeof CertificationsRoute
   '/clients': typeof ClientsRoute
+  '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/industries': typeof IndustriesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/projects': typeof ProjectsRoute
+  '/terms': typeof TermsRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/services/': typeof ServicesIndexRoute
 }
@@ -106,9 +133,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/certifications'
     | '/clients'
+    | '/contact'
     | '/gallery'
     | '/industries'
+    | '/privacy-policy'
     | '/projects'
+    | '/terms'
     | '/services/$slug'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
@@ -117,9 +147,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/certifications'
     | '/clients'
+    | '/contact'
     | '/gallery'
     | '/industries'
+    | '/privacy-policy'
     | '/projects'
+    | '/terms'
     | '/services/$slug'
     | '/services'
   id:
@@ -128,9 +161,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/certifications'
     | '/clients'
+    | '/contact'
     | '/gallery'
     | '/industries'
+    | '/privacy-policy'
     | '/projects'
+    | '/terms'
     | '/services/$slug'
     | '/services/'
   fileRoutesById: FileRoutesById
@@ -140,9 +176,12 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CertificationsRoute: typeof CertificationsRoute
   ClientsRoute: typeof ClientsRoute
+  ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
   IndustriesRoute: typeof IndustriesRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ProjectsRoute: typeof ProjectsRoute
+  TermsRoute: typeof TermsRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
@@ -177,6 +216,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ClientsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gallery': {
       id: '/gallery'
       path: '/gallery'
@@ -191,11 +237,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects': {
       id: '/projects'
       path: '/projects'
       fullPath: '/projects'
       preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/': {
@@ -220,9 +280,12 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CertificationsRoute: CertificationsRoute,
   ClientsRoute: ClientsRoute,
+  ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
   IndustriesRoute: IndustriesRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ProjectsRoute: ProjectsRoute,
+  TermsRoute: TermsRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }

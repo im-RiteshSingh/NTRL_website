@@ -215,11 +215,12 @@ function Field({
 }: {
   id: string;
   label: string;
-  required?: boolean;
-  type?: string;
-  error?: string;
-  placeholder?: string;
+  required?: boolean | undefined;
+  type?: string | undefined;
+  error?: string | undefined;
+  placeholder?: string | undefined;
 }) {
+
   return (
     <div>
       <Label htmlFor={id}>

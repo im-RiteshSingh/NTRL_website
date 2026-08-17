@@ -24,13 +24,12 @@ export const company = {
   phone: "+91-7739568485",
   phoneHref: "tel:+917739568485",
   emails: ["info@ntrlindia.in", "nirvantesting.pat@gmail.com"],
-  whatsapp: "[WHATSAPP NUMBER TO BE CONFIRMED BY NTRL]",
+  whatsapp: "+91-7739568485",
   workingHours: "[WORKING HOURS TO BE PROVIDED BY NTRL]",
   mapsQuery:
     "4A/11 Jagdamba Path, North S.K. Puri, Boring Road, Patna 800013, Bihar",
   statutory: [
     { label: "CIN", value: "U74999BR2019PTC044363" },
-    { label: "PAN", value: "AAGCN7796P" },
     { label: "GSTIN", value: "10AAGCN7796P1ZQ" },
   ],
   leadership: [

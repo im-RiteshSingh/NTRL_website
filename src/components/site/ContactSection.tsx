@@ -38,11 +38,18 @@ export function ContactCards() {
           <span className="text-muted-foreground">{company.workingHours}</span>
         </ContactCard>
       </Reveal>
-      <Reveal as="li" delay={160}>
-        <ContactCard icon={MessageCircle} title="WhatsApp">
-          <span className="text-muted-foreground">{company.whatsapp}</span>
-        </ContactCard>
-      </Reveal>
+    <Reveal as="li" delay={160}>
+  <ContactCard icon={MessageCircle} title="WhatsApp">
+    <a
+      href={`https://wa.me/${company.whatsapp.replace(/\D/g, "")}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-semibold text-primary hover:underline"
+    >
+      {company.whatsapp}
+    </a>
+  </ContactCard>
+</Reveal>
       <Reveal as="li" delay={240}>
         <ContactCard icon={MapPin} title="Website">
           <a

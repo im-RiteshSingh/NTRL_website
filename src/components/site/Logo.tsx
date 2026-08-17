@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-import logo from "@/assets/ntrl-logo.png.asset.json";
+import logo from "@/assets/logo.png";
 import { company } from "@/data/siteData";
 import { cn } from "@/lib/utils";
 
@@ -18,7 +18,7 @@ export function Logo({
       aria-label={`${company.shortName} — ${company.name}, home`}
     >
       <img
-        src={logo.url}
+        src={logo}
         alt="NTRL — Nirvan Testing & Research Laboratory logo"
         width={64}
         height={64}

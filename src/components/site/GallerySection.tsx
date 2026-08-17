@@ -2,7 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { ImageOff } from "lucide-react";
 import { useState } from "react";
 
-import galleryEquipment from "@/assets/gallery-equipment.jpg";
+import galleryEquipment01 from "@/assets/gallery-equipment-01.jpg";
+import galleryEquipment02 from "@/assets/gallery-equipment-02.jpg";
+import galleryEquipment03 from "@/assets/gallery-equipment-03.jpg";
+import galleryEquipment04 from "@/assets/gallery-equipment-04.jpg";
+import galleryEquipment05 from "@/assets/gallery-equipment-05.jpg";
+import galleryEquipment06 from "@/assets/gallery-equipment-06.jpg";
+import galleryEquipment07 from "@/assets/gallery-equipment-07.jpg";
+import galleryLaboratory01 from "@/assets/gallery-laboratory-01.jpg";
+import galleryLaboratory02 from "@/assets/gallery-laboratory-02.jpg";
+import galleryLaboratory03 from "@/assets/gallery-laboratory-03.jpg";
 import galleryField from "@/assets/gallery-field.jpg";
 import galleryInfra from "@/assets/gallery-infra.jpg";
 import heroLab from "@/assets/hero-lab.jpg";
@@ -27,9 +36,63 @@ const items: GalleryItem[] = [
   },
   {
     category: "Equipment",
-    src: galleryEquipment,
-    alt: "Concrete cube compression testing machine with digital control panel and concrete samples",
-    caption: "Concrete compression testing equipment",
+    src: galleryEquipment01,
+    alt: "NTRL laboratory testing equipment",
+    caption: "Laboratory testing equipment",
+  },
+  {
+    category: "Equipment",
+    src: galleryEquipment02,
+    alt: "NTRL laboratory testing equipment",
+    caption: "Advanced testing equipment",
+  },
+  {
+    category: "Equipment",
+    src: galleryEquipment03,
+    alt: "NTRL laboratory testing equipment",
+    caption: "Materials testing equipment",
+  },
+  {
+    category: "Equipment",
+    src: galleryEquipment04,
+    alt: "NTRL laboratory testing equipment",
+    caption: "Laboratory equipment and facilities",
+  },
+  {
+    category: "Equipment",
+    src: galleryEquipment05,
+    alt: "NTRL laboratory testing equipment",
+    caption: "Testing and measurement equipment",
+  },
+  {
+    category: "Equipment",
+    src: galleryEquipment06,
+    alt: "NTRL laboratory testing equipment",
+    caption: "Construction materials testing equipment",
+  },
+  {
+    category: "Equipment",
+    src: galleryEquipment07,
+    alt: "NTRL laboratory testing equipment",
+    caption: "Laboratory testing infrastructure",
+  },
+  {
+    category: "Laboratory",
+    src: galleryLaboratory01,
+    alt: "NTRL laboratory testing facility",
+    caption: "Laboratory testing facility",
+  },
+  {
+    category: "Laboratory",
+    src: galleryLaboratory02,
+    alt: "NTRL laboratory testing facility",
+    caption: "Laboratory testing section",
+  },
+  {
+    category: "Laboratory",
+    src: galleryLaboratory03,
+    alt: "NTRL laboratory testing facility",
+    caption: "Materials testing laboratory",
   },
   {
     category: "Field Testing",
@@ -44,24 +107,9 @@ const items: GalleryItem[] = [
     caption: "Construction and infrastructure project testing support",
   },
   {
-    category: "Equipment",
-    alt: "Placeholder for NTRL laboratory equipment photograph",
-    caption: "[LABORATORY EQUIPMENT PHOTOS TO BE PROVIDED BY NTRL]",
-  },
-  {
-    category: "Laboratory",
-    alt: "Placeholder for NTRL bitumen and soil section photograph",
-    caption: "[LABORATORY SECTION PHOTOS TO BE PROVIDED BY NTRL]",
-  },
-  {
     category: "Team",
     alt: "Placeholder for NTRL technical team photograph",
     caption: "[TEAM PHOTOS TO BE PROVIDED BY NTRL]",
-  },
-  {
-    category: "Construction Testing",
-    alt: "Placeholder for concrete cube testing activity photograph",
-    caption: "[CONSTRUCTION TESTING PHOTOS TO BE PROVIDED BY NTRL]",
   },
 ];
 
@@ -114,11 +162,7 @@ export function GalleryGrid() {
           </Reveal>
         ))}
       </ul>
-      <p className="mt-8 rounded-md border border-dashed border-border bg-surface p-4 text-xs leading-relaxed text-muted-foreground">
-        Representative imagery is used where NTRL photographs are not yet available. All placeholder
-        tiles will be replaced with the company&apos;s original laboratory, equipment, field-testing
-        and team photographs once supplied.
-      </p>
+      
     </div>
   );
 }

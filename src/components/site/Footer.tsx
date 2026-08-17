@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
-import logo from "@/assets/ntrl-logo.png.asset.json";
+import logo from "@/assets/logo.png";
 import { company, nav, services } from "@/data/siteData";
 
 const footerServices = services.slice(0, 9);
@@ -14,7 +14,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <img
-                src={logo.url}
+                src={logo}
                 alt="NTRL logo"
                 width={48}
                 height={48}
@@ -104,15 +104,32 @@ export function Footer() {
                   ))}
                 </span>
               </li>
-              <li className="flex gap-3">
-                <MessageCircle className="mt-0.5 size-4 shrink-0 text-highlight" aria-hidden="true" />
-                <span className="text-primary-foreground/55">WhatsApp: {company.whatsapp}</span>
-              </li>
+              <li>
+  <a
+    href={`https://wa.me/${company.whatsapp.replace(/\D/g, "")}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`Chat with NTRL on WhatsApp at ${company.whatsapp}`}
+    className="inline-flex w-full items-center gap-3 rounded-lg border border-primary-foreground/15 px-3 py-2.5 text-sm text-primary-foreground/80 transition-all hover:border-highlight/40 hover:bg-primary-foreground/5 hover:text-highlight sm:w-auto"
+  >
+    <MessageCircle
+      className="size-5 shrink-0 text-highlight"
+      aria-hidden="true"
+    />
+
+    <span className="min-w-0">
+      <span className="block text-xs text-primary-foreground/50">
+        WhatsApp
+      </span>
+
+      <span className="block break-all font-medium">
+        {company.whatsapp}
+      </span>
+    </span>
+  </a>
+</li>
             </ul>
-            <p className="mt-5 text-xs text-primary-foreground/55">
-              Social media profiles (LinkedIn, Facebook, Instagram, YouTube) will be linked here once
-              official URLs are provided by NTRL.
-            </p>
+          
           </div>
         </div>
       </div>

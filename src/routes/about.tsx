@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2 } from "lucide-react";
 
-import galleryEquipment from "@/assets/gallery-equipment.jpg";
+import galleryEquipment from "@/assets/gallery-equipment-01.jpg";
 import { CTASection } from "@/components/site/CTASection";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
